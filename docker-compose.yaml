@@ -1,0 +1,41 @@
+  services:
+    fcc-server:
+      build: .
+      container_name: fcc-server
+      ports:
+        - "8082:8082"
+      command: fcc-server
+      dns:
+        - 8.8.8.8
+        - 1.1.1.1
+      environment:
+        - HOST=0.0.0.0
+        - PORT=8082
+        - NVIDIA_NIM_API_KEY=${NVIDIA_NIM_API_KEY}
+        - ANTHROPIC_AUTH_TOKEN=freecc
+      volumes:
+        - fcc_data:/root/.config/free-claude-code
+        - fcc_home:/root/.fcc
+      restart: unless-stopped
+
+    fcc-claude:
+      build: .
+      container_name: fcc-claude
+      dns:
+        - 8.8.8.8
+        - 1.1.1.1
+      environment:
+        - ANTHROPIC_BASE_URL=http://fcc-server:8082
+        - ANTHROPIC_AUTH_TOKEN=freecc
+      volumes:
+        - fcc_home:/root/.fcc
+        - fcc_data:/root/.config/free-claude-code
+        - ${USERPROFILE}:/workspace # this allows claude to access any file from your host machine
+      stdin_open: true
+      tty: true
+      depends_on:
+        - fcc-server
+
+  volumes:
+    fcc_data:
+    fcc_home:
