@@ -2,13 +2,16 @@
     <h1>FCC</h1>
     <sub>now inside a Docker Container.</sub>
     <br><br>
-    <a href="/doc/INSTALLATION_pt-BR">
-        <button>🇧🇷</button>
-    </a>
-    <a href="/doc/INSTALLATION_en-US">
-        <button>🇺🇸</button>
-    </a>
 </div>
+
+<p align="center">
+  <a href="doc/INSTALLATION_en-US.md">
+    <kbd>🇺🇸 English</kbd>
+  </a>
+  <a href="doc/INSTALLATION_pt-BR.md">
+    <kbd>🇧🇷 Português</kbd>
+  </a>
+</p>
 
 ## About the project
 
