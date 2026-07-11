@@ -42,7 +42,8 @@ docker compose exec -it fcc-claude fcc-claude
 - Check if everything is working by sending a message to claude code!
 
 ![alt text](/assets/claude-code-terminal.png)
-<sub>Don't mind my weird unicodes, my windows terminal is odd.</sub>
+
+<div align="center"><sub>Figure 1: Don't mind my weird unicodes, my windows terminal is odd.</sub></div>
 
 ### Troubleshooting
 
