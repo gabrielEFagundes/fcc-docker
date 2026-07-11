@@ -41,7 +41,9 @@ docker compose exec -it fcc-claude fcc-claude
 
 * Verifique se tudo está funcionando enviando uma mensagem para o Claude Code!
 
-![alt text](/assets/claude-code-terminal.png) <sub>Ignore os caracteres estranhos; o meu Windows Terminal está com um problema de codificação.</sub>
+![alt text](/assets/claude-code-terminal.png)
+
+<div align="center"><sub>Ignore os caracteres estranhos; o meu Windows Terminal está com problemas de codificação.</sub></div>
 
 ### Solução de problemas
 
