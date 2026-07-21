@@ -23,6 +23,10 @@ This project contains all the features from *fcc*, including:
 - Full reading access to your user root files (`/workspace/**`), such as Documents and Downloads
 - Full editing and creating permissions, if you allow him.
 - Undestands `CLAUDE.md` / agentic files.
+- Supports most if not all claude code commands
+  - `plugin add`
+  - `plugin install`
+  - `--dangerously-skip-permissions` (can't be used on root user or with sudo)
 - Pretty much anything that *fcc* has to give.
 
 ## Contributing
